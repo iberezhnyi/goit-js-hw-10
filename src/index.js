@@ -16,13 +16,11 @@ function onInputChange(evt) {
 
   resetMarkup();
 
-  if (!inputValue) {
-    return;
-  }
+  if (!inputValue) return;
 
   fetchCountries(inputValue)
     .then(filteredCountriesByArrayLength)
-    .catch(error => console.log(error));
+    .catch(console.log);
 }
 
 function filteredCountriesByArrayLength(arrayCountries) {
